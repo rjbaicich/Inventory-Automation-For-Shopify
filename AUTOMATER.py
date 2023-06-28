@@ -93,33 +93,33 @@ while True:
 
 
 
-# Questions to be answered to add to above code:
+Questions to be answered to add to above code:
 
 
-# How to clean a csv to fit another format? As in convert to another format?
+How to clean a csv to fit another format? As in convert to another format?
 
-# How to output that new formatted csv file to a saved file that I can upload?
+How to output that new formatted csv file to a saved file that I can upload?
 
-# How to automate the last step(the upload to shopify)?
+How to automate the last step(the upload to shopify)?
 
-# How to take that original csv from an email once daily?
+How to take that original csv from an email once daily?
 
-# How to run this program once daily automatically?
-# To automate this process to run daily, you can use a scheduler tool like cron 
-# (on Unix-based systems) or Task Scheduler (on Windows). 
+How to run this program once daily automatically?
+To automate this process to run daily, you can use a scheduler tool like cron 
+(on Unix-based systems) or Task Scheduler (on Windows). 
 
-# Do we need a database or sql connection to do this?
-# if you only need to process the data and perform operations
-#  without persistent storage, a database might not be necessary. 
-#  It ultimately depends on your project's requirements and the volume
-#  of data you're dealing with.
+Do we need a database or sql connection to do this?
+if you only need to process the data and perform operations
+ without persistent storage, a database might not be necessary. 
+ It ultimately depends on your project's requirements and the volume
+ of data you're dealing with.
 
 
-# Can I set this up on a server to run automatically or no need?
+Can I set this up on a server to run automatically or no need?
 
-# What parts need to use a scheduler tool like cron 
-# (on Unix-based systems) or Task Scheduler (on Windows).?
+What parts need to use a scheduler tool like cron 
+(on Unix-based systems) or Task Scheduler (on Windows).?
 
-# How to raise price of every item by 20% from the original csv on the new one?
+How to raise price of every item by 20% from the original csv on the new one?
 
-# using wildcard? ( * )
+using wildcard? ( * )
