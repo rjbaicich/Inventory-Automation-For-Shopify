@@ -8,39 +8,39 @@ import shopify
 
 def process_inventory():
     # Connect to the email server
-    mail = imaplib.IMAP4_SSL('imap.example.com')  # Replace with your email server
+    mail = imaplib.IMAP4_SSL('imap.example.com')  #Replace with your email server
 
     # Login to your email account
-    mail.login('your_email@example.com', 'your_password')  # Replace with your email credentials
+    mail.login('your_email@example.com', 'your_password')  #Replace with your email credentials
 
-    # Select the mailbox to search for the email
+    #Select the mailbox to search for the email
     mail.select('inbox')
 
-    # Search for emails containing the CSV file
-    result, data = mail.search(None, 'ALL')  # You can customize the search criteria
+    #Search for emails containing the CSV file
+    result, data = mail.search(None, 'ALL')  #You can customize the search criteria
 
-    # Get the latest email containing the CSV file
+    #Get the latest email containing the CSV file
     latest_email_id = data[0].split()[-1]
     result, email_data = mail.fetch(latest_email_id, '(RFC822)')
 
-    # Parse the email data
+    #Parse the email data
     raw_email = email_data[0][1]
     email_message = email.message_from_bytes(raw_email)
 
-    # Download the CSV attachment
+    #Download the CSV attachment
     for part in email_message.walk():
         if part.get_content_type() == 'text/csv':
             attachment = part.get_payload(decode=True)
             with open('inventory.csv', 'wb') as file:
                 file.write(attachment)
 
-    # Read the CSV data into a pandas DataFrame
+    #Read the CSV data into a pandas DataFrame
     data = pd.read_csv('inventory.csv')
 
-    # Clean the data
-    # ...
+    #Clean the data
+    #...
 
-    # Raise the price of each item by 20%
+    #Raise the price of each item by 20%
     data['price'] = data['price'] * 1.2
 
     # Connect to the PostgreSQL database
