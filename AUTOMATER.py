@@ -8,10 +8,10 @@ import shopify
 
 def process_inventory():
     # Connect to the email server
-    mail = imaplib.IMAP4_SSL('imap.example.com')  #Replace with your email server
+    mail = imaplib.IMAP4_SSL('r**********@gmail.com')  #Replace with your email server
 
     # Login to your email account
-    mail.login('your_email@example.com', 'your_password')  #Replace with your email credentials
+    mail.login('r**********@gmail.com', '***********')  #Replace with your email credentials
 
     #Select the mailbox to search for the email
     mail.select('inbox')
