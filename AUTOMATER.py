@@ -91,7 +91,7 @@ while True:
     schedule.run_pending()
     time.sleep(1)
 
-
+Chron jobs as scheduler? do i set it as schedule or frequency or if found?
 
 Questions to be answered to add to above code:
 
