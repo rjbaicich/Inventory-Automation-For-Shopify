@@ -90,6 +90,8 @@ while True:
     schedule.run_pending()
     time.sleep(1)
 
+    #with regards to chron jobs is there an alternative way to schedule?
+
 Chron jobs as scheduler? do i set it as schedule or frequency or if found?
 
 Questions to be answered to add to above code:
