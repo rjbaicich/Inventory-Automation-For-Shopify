@@ -38,8 +38,7 @@ def process_inventory():
     data = pd.read_csv('inventory.csv')
 
     #Clean the data
-    #...
-
+ 
     #Raise the price of each item by 20%
     data['price'] = data['price'] * 1.2
 
