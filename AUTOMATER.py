@@ -61,19 +61,19 @@ def process_inventory():
     # cur.execute(create_table_query)
 
     # Insert the data into the database
-    for _, row in data.iterrows():
-        insert_query = f'''
-            INSERT INTO inventory ({", ".join(columns)})
-            VALUES ({", ".join(["%s"] * len(columns))})
-        '''
-        cur.execute(insert_query, tuple(row))
+    # for _, row in data.iterrows():
+    #     insert_query = f'''
+    #         INSERT INTO inventory ({", ".join(columns)})
+    #         VALUES ({", ".join(["%s"] * len(columns))})
+    #     '''
+    #     cur.execute(insert_query, tuple(row))
 
-    # Commit the changes to the database
-    conn.commit()
+    # # Commit the changes to the database
+    # conn.commit()
 
-    # Close the database connection
-    cur.close()
-    conn.close()
+    # # Close the database connection
+    # cur.close()
+    # conn.close()
 
     # Upload the data to Shopify
     shopify.Shopify().upload_inventory_data(data)  # Replace with your Shopify upload code
