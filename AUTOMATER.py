@@ -42,38 +42,38 @@ def process_inventory():
     #Raise the price of each item by 20%
     data['price'] = data['price'] * 1.2
 
-    # # Connect to the PostgreSQL database
-    # conn = psycopg2.connect(dbname='your_dbname', user='your_username',
-    #                         password='your_password', host='your_host')
+    # Connect to the PostgreSQL database
+    conn = psycopg2.connect(dbname='your_dbname', user='your_username',
+                            password='your_password', host='your_host')
 
-    # cur = conn.cursor()
+    cur = conn.cursor()
 
-    # # Define the columns for the table
-    # columns = list(data.columns)  # Use all columns from the CSV
+    # Define the columns for the table
+    columns = list(data.columns)  # Use all columns from the CSV
 
-    # # Create the table in the database
-    # create_table_query = f'''
-    #     CREATE TABLE inventory (
-    #         {", ".join([f"{column} VARCHAR(255)" for column in columns])}
-    #     )
-    # '''
+    # Create the table in the database
+    create_table_query = f'''
+        CREATE TABLE inventory (
+            {", ".join([f"{column} VARCHAR(255)" for column in columns])}
+        )
+    '''
 
-    # cur.execute(create_table_query)
+    cur.execute(create_table_query)
 
-    # Insert the data into the database
-    # for _, row in data.iterrows():
-    #     insert_query = f'''
-    #         INSERT INTO inventory ({", ".join(columns)})
-    #         VALUES ({", ".join(["%s"] * len(columns))})
-    #     '''
-    #     cur.execute(insert_query, tuple(row))
+    Insert the data into the database
+    for _, row in data.iterrows():
+        insert_query = f'''
+            INSERT INTO inventory ({", ".join(columns)})
+            VALUES ({", ".join(["%s"] * len(columns))})
+        '''
+        cur.execute(insert_query, tuple(row))
 
-    # # Commit the changes to the database
-    # conn.commit()
+    # Commit the changes to the database
+    conn.commit()
 
-    # # Close the database connection
-    # cur.close()
-    # conn.close()
+    # Close the database connection
+    cur.close()
+    conn.close()
 
     # Upload the data to Shopify
     shopify.Shopify().upload_inventory_data(data)  # Replace with your Shopify upload code
