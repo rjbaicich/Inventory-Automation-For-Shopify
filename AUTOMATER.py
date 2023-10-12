@@ -91,38 +91,59 @@ while True:
     time.sleep(1)
 
 
-# is it better to do shopify step manually? 
-    #with regards to chron jobs is there an alternative way to schedule?
+# Automating Shopify Operations
 
-Chron jobs as scheduler? do i set it as schedule or frequency or if found?
+## 1. Scheduling Shopify Updates
 
-Questions to be answered to add to above code:
+**Question:** Is it better to do Shopify steps manually, or is there an automated alternative for scheduling updates?
 
+**Comments:** Automating repetitive tasks can save time and reduce errors. For scheduling, you can use tools like Task Scheduler (Windows) or cron jobs (Unix) to automate routine Shopify updates or data imports.
 
-How to clean a csv to fit another format? As in convert to another format?
+## 2. Data Format Transformation
 
-How to output that new formatted csv file to a saved file that I can upload?
+**Question:** How to clean a CSV to fit another format, such as converting it to a different format?
 
-How to automate the last step(the upload to shopify)?
+**Comments:** Consider using data transformation tools or programming languages like Python with libraries like Pandas to clean and convert CSV data to your desired format.
 
-How to take that original csv from an email once daily?
+## 3. Exporting Formatted Data
 
-How to run this program once daily automatically?
-To automate this process to run daily, you can use a scheduler tool like cron 
-(on Unix-based systems) or Task Scheduler (on Windows). 
+**Question:** How to output the newly formatted CSV file to a saved file that can be uploaded to Shopify?
 
-Do we need a database or sql connection to do this?
-if you only need to process the data and perform operations
- without persistent storage, a database might not be necessary. 
- It ultimately depends on your project's requirements and the volume
- of data you're dealing with.
+**Comments:** Use programming languages like Python or tools like Excel to save the formatted data to a new CSV file, ready for upload.
 
+## 4. Automating Upload to Shopify
 
-Can I set this up on a server to run automatically or no need?
+**Question:** How to automate the last step, i.e., the upload to Shopify?
 
-What parts need to use a scheduler tool like cron 
-(on Unix-based systems) or Task Scheduler (on Windows).?
+**Comments:** You can use Shopify APIs or Shopify Apps to automate the data upload process. Consider using Shopify's REST API or third-party apps that can connect to your data source.
 
-How to raise price of every item by 20% from the original csv on the new one?
+## 5. Retrieving Data from Email
 
-using wildcard? ( * )
+**Question:** How to take the original CSV from an email daily?
+
+**Comments:** You can use email automation tools, Python's email libraries, or email forwarding rules to retrieve CSV attachments from emails.
+
+## 6. Scheduling Daily Execution
+
+**Question:** How to run this program once daily automatically?
+
+**Comments:** Use a scheduler tool like Task Scheduler (Windows) or cron jobs (Unix) to set up the program to run automatically at a specific time each day.
+
+## 7. Database or SQL Connection
+
+**Question:** Do we need a database or SQL connection for this?
+
+**Comments:** If your operation is stateless and you only need to process data without persistent storage, you may not need a database. However, if you need to store, retrieve, or manipulate structured data, a database could be useful.
+
+## 8. Running on a Server
+
+**Question:** Can I set this up on a server to run automatically?
+
+**Comments:** Yes, you can set up your automation script or program on a server. Cloud-based servers like AWS, Google Cloud, or Azure are suitable for this purpose.
+
+## 9. Increasing Prices
+
+**Question:** How to raise the price of every item by 20% from the original CSV in the new one?
+
+**Comments:** You can perform this operation using programming languages like Python or data transformation tools. Use mathematical operations to increase prices by 20%, for example, by multiplying each price by 1.20.
+
