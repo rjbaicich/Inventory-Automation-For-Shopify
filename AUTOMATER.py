@@ -174,6 +174,15 @@ for user in users:
 
 # Commit the changes
 conn.commit()
+
+# Retrieve and print users from the database
+cursor.execute("SELECT name, age FROM users ORDER BY age")
+db_users = cursor.fetchall()
+for db_user in db_users:
+    print(f"{db_user[0]} - Age: {db_user[1]}")
+
+# Close the database connection
+conn.close()
 ## 8. Running on a Server
 
 **Question:** Can I set this up on a server to run automatically?
