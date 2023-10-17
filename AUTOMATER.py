@@ -128,7 +128,13 @@ while True:
 **Question:** How to run this program once daily automatically?
 
 **Comments:** Use a scheduler tool like Task Scheduler (Windows) or cron jobs (Unix) to set up the program to run automatically at a specific time each day.
-
+# Open Task Scheduler
+# Create a Basic Task
+# Choose a Trigger
+# Choose the Action
+# Set the Start Date and Time
+# Review and Finish
+# Test the Task
 ## 7. Database or SQL Connection
 
 **Question:** Do we need a database or SQL connection for this?
