@@ -140,7 +140,14 @@ while True:
 **Question:** Do we need a database or SQL connection for this?
 
 **Comments:** If your operation is stateless and you only need to process data without persistent storage, you may not need a database. However, if you need to store, retrieve, or manipulate structured data, a database could be useful.
+import sqlite3
 
+# Example data: List of users
+users = [
+    {"id": 1, "name": "Alice", "age": 28},
+    {"id": 2, "name": "Bob", "age": 32},
+    {"id": 3, "name": "Charlie", "age": 25},
+]
 ## 8. Running on a Server
 
 **Question:** Can I set this up on a server to run automatically?
