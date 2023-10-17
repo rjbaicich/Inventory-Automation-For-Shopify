@@ -155,7 +155,25 @@ for user in sorted_users:
 
 # Scenario 2: Structured Data and Data Retrieval (using SQLite database)
 print("\nScenario 2: Structured Data and Data Retrieval (using SQLite database)")
+# Connect to the SQLite database (or create if it doesn't exist)
+conn = sqlite3.connect("user_data.db")
+cursor = conn.cursor()
 
+# Create a table for users
+cursor.execute("""
+    CREATE TABLE IF NOT EXISTS users (
+        id INTEGER PRIMARY KEY,
+        name TEXT,
+        age INTEGER
+    )
+""")
+
+# Insert user data into the database
+for user in users:
+    cursor.execute("INSERT INTO users (name, age) VALUES (?, ?)", (user["name"], user["age"]))
+
+# Commit the changes
+conn.commit()
 ## 8. Running on a Server
 
 **Question:** Can I set this up on a server to run automatically?
