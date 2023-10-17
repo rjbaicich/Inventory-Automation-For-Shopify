@@ -142,47 +142,47 @@ while True:
 **Comments:** If your operation is stateless and you only need to process data without persistent storage, you may not need a database. However, if you need to store, retrieve, or manipulate structured data, a database could be useful.
 import sqlite3
 
-# Example data: List of users
-users = [
-    {"id": 1, "name": "Alice", "age": 28},
-    {"id": 2, "name": "Bob", "age": 32},
-    {"id": 3, "name": "Charlie", "age": 25},
-]# Scenario 1: Stateless Operations (in-memory)
-print("Scenario 1: Stateless Operations (in-memory)")
-sorted_users = sorted(users, key=lambda user: user["age"])
-for user in sorted_users:
-    print(f"{user['name']} - Age: {user['age']}")
+# # Example data: List of users
+# users = [
+#     {"id": 1, "name": "Alice", "age": 28},
+#     {"id": 2, "name": "Bob", "age": 32},
+#     {"id": 3, "name": "Charlie", "age": 25},
+# ]# Scenario 1: Stateless Operations (in-memory)
+# print("Scenario 1: Stateless Operations (in-memory)")
+# sorted_users = sorted(users, key=lambda user: user["age"])
+# for user in sorted_users:
+#     print(f"{user['name']} - Age: {user['age']}")
 
-# Scenario 2: Structured Data and Data Retrieval (using SQLite database)
-print("\nScenario 2: Structured Data and Data Retrieval (using SQLite database)")
-# Connect to the SQLite database (or create if it doesn't exist)
-conn = sqlite3.connect("user_data.db")
-cursor = conn.cursor()
+# # Scenario 2: Structured Data and Data Retrieval (using SQLite database)
+# print("\nScenario 2: Structured Data and Data Retrieval (using SQLite database)")
+# # Connect to the SQLite database (or create if it doesn't exist)
+# conn = sqlite3.connect("user_data.db")
+# cursor = conn.cursor()
 
-# Create a table for users
-cursor.execute("""
-    CREATE TABLE IF NOT EXISTS users (
-        id INTEGER PRIMARY KEY,
-        name TEXT,
-        age INTEGER
-    )
-""")
+# # Create a table for users
+# cursor.execute("""
+#     CREATE TABLE IF NOT EXISTS users (
+#         id INTEGER PRIMARY KEY,
+#         name TEXT,
+#         age INTEGER
+#     )
+# """)
 
-# Insert user data into the database
-for user in users:
-    cursor.execute("INSERT INTO users (name, age) VALUES (?, ?)", (user["name"], user["age"]))
+# # Insert user data into the database
+# for user in users:
+#     cursor.execute("INSERT INTO users (name, age) VALUES (?, ?)", (user["name"], user["age"]))
 
-# Commit the changes
-conn.commit()
+# # Commit the changes
+# conn.commit()
 
-# Retrieve and print users from the database
-cursor.execute("SELECT name, age FROM users ORDER BY age")
-db_users = cursor.fetchall()
-for db_user in db_users:
-    print(f"{db_user[0]} - Age: {db_user[1]}")
+# # Retrieve and print users from the database
+# cursor.execute("SELECT name, age FROM users ORDER BY age")
+# db_users = cursor.fetchall()
+# for db_user in db_users:
+#     print(f"{db_user[0]} - Age: {db_user[1]}")
 
-# Close the database connection
-conn.close()
+# # Close the database connection
+# conn.close()
 ## 8. Running on a Server
 
 **Question:** Can I set this up on a server to run automatically?
