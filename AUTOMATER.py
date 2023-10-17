@@ -147,7 +147,15 @@ users = [
     {"id": 1, "name": "Alice", "age": 28},
     {"id": 2, "name": "Bob", "age": 32},
     {"id": 3, "name": "Charlie", "age": 25},
-]
+]# Scenario 1: Stateless Operations (in-memory)
+print("Scenario 1: Stateless Operations (in-memory)")
+sorted_users = sorted(users, key=lambda user: user["age"])
+for user in sorted_users:
+    print(f"{user['name']} - Age: {user['age']}")
+
+# Scenario 2: Structured Data and Data Retrieval (using SQLite database)
+print("\nScenario 2: Structured Data and Data Retrieval (using SQLite database)")
+
 ## 8. Running on a Server
 
 **Question:** Can I set this up on a server to run automatically?
