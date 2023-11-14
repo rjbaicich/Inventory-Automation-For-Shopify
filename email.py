@@ -54,3 +54,10 @@ def process_inventory_email():
                     # Extract and process text content
                     body = part.get_payload(decode=True)
                     print(body.decode("utf-8"))
+
+
+    # Close the connection
+    mail.logout()
+
+if __name__ == "__main__":
+    process_inventory_email()
