@@ -19,3 +19,21 @@ def process_inventory_email():
     # Search for all emails in the mailbox
     status, messages = mail.search(None, "ALL")
     message_ids = messages[0].split()
+        # Process each email
+    for msg_id in message_ids:
+        # Fetch the email by ID
+        status, msg_data = mail.fetch(msg_id, "(RFC822)")
+        raw_email = msg_data[0][1]
+        
+        # Parse the raw email using the email library
+        msg = email.message_from_bytes(raw_email)
+        
+        # Extract information from the email (customize as needed)
+        subject, encoding = decode_header(msg["Subject"])[0]
+        subject = subject.decode(encoding) if isinstance(subject, bytes) else subject
+        
+        sender, encoding = decode_header(msg.get("From"))[0]
+        sender = sender.decode(encoding) if isinstance(sender, bytes) else sender
+        
+        # Additional information extraction based on your needs
+        
