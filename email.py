@@ -36,4 +36,21 @@ def process_inventory_email():
         sender = sender.decode(encoding) if isinstance(sender, bytes) else sender
         
         # Additional information extraction based on your needs
-        
+             
+        # For example, print the subject and sender
+        print(f"Subject: {subject}")
+        print(f"From: {sender}")
+
+        # Process the email content as needed (customize this part)
+        if msg.is_multipart():
+            for part in msg.walk():
+                content_type = part.get_content_type()
+                content_disposition = str(part.get("Content-Disposition"))
+
+                if "attachment" in content_disposition:
+                    # Handle attachments if needed
+                    pass
+                else:
+                    # Extract and process text content
+                    body = part.get_payload(decode=True)
+                    print(body.decode("utf-8"))
