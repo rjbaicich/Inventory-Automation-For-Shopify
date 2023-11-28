@@ -29,3 +29,10 @@ result, message_data = mail.fetch(latest_email_id, "(RFC822)")
 # Parse the email content
 raw_email = message_data[0][1]
 email_message = email.message_from_bytes(raw_email)
+
+# Find and download the attached CSV file
+for part in email_message.walk():
+    if part.get_content_type() == "text/csv":
+        attachment_data = part.get_payload(decode=True)
+        with open("downloaded_file.csv", "wb") as f:
+            f.write(attachment_data)
