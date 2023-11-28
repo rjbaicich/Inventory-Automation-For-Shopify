@@ -36,3 +36,16 @@ for part in email_message.walk():
         attachment_data = part.get_payload(decode=True)
         with open("downloaded_file.csv", "wb") as f:
             f.write(attachment_data)
+
+
+# Shopify Configuration
+SHOPIFY_API_KEY = os.getenv("SHOPIFY_API_KEY")
+SHOPIFY_PASSWORD = os.getenv("SHOPIFY_PASSWORD")
+SHOPIFY_STORE_URL = os.getenv("SHOPIFY_STORE_URL")
+
+# Upload the CSV file to Shopify (you'll need to implement this part based on Shopify API)
+shopify = Shopify(SHOPIFY_API_KEY, SHOPIFY_PASSWORD, SHOPIFY_STORE_URL)
+response = shopify.upload_csv("downloaded_file.csv")
+
+# Print the response
+print(response)
