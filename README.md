@@ -5,6 +5,7 @@ Currently, my Python program is in the development stage, with the primary objec
 
 However, my vision extends beyond Shopify. While currently tailored for this platform, I aim to design a flexible and versatile inventory management system that can adapt to other e-commerce platforms as well. This forward-looking approach involves developing a modular architecture that will pave the way for easy integration with various e-commerce systems in the future. My ultimate goal is to provide businesses with a unified solution for managing their inventory across multiple platforms, thereby saving time, reducing manual errors, and enhancing overall operational efficiency. As the program evolves and gains sophistication, it is poised to become a valuable asset for online retailers seeking a comprehensive inventory management solution.
 
+** NOTE: Swap for personal credentials to make connection.**
 """
 # Shopify CSV Converter
 
