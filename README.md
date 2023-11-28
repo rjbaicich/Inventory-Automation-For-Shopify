@@ -1,5 +1,5 @@
 
-
+                          ****WORK IN PROGRESS****
 
 Currently, my Python program is in the development stage, with the primary objective of streamlining and automating inventory management for Shopify. The program represents an exciting step towards improving the efficiency and accuracy of inventory tracking and order fulfillment processes. At this stage, the focus is on building a robust foundation that can seamlessly integrate with Shopify's platform, allowing businesses to effortlessly monitor product stocks, receive real-time notifications for low inventory, and automate order updates. By harnessing the power of Python, I am working diligently to create a user-friendly interface and incorporate functionalities that can cater to the unique needs of Shopify store owners.
 
