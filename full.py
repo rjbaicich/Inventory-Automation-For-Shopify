@@ -45,3 +45,10 @@ def fetch_and_upload_csv():
 
             # Print the response
             print(response)
+
+            if __name__ == "__main__":
+    # Load environment variables
+    load_dotenv()
+
+    # Fetch and upload CSV
+    fetch_and_upload_csv()
