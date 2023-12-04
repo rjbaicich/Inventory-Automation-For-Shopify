@@ -28,3 +28,14 @@ def fetch_and_upload_csv():
     # Parse the email content
     raw_email = message_data[0][1]
     email_message = email.message_from_bytes(raw_email)
+# Find and download the attached CSV file
+    for part in email_message.walk():
+        if part.get_content_type() == "text/csv":
+            attachment_data = part.get_payload(decode=True)
+            with open("downloaded_file.csv", "wb") as f:
+                f.write(attachment_data)
+
+            # Shopify Configuration
+            SHOPIFY_API_KEY = os.getenv("SHOPIFY_API_KEY")
+            SHOPIFY_PASSWORD = os.getenv("SHOPIFY_PASSWORD")
+            SHOPIFY_STORE_URL = os.getenv("SHOPIFY_STORE_URL")
