@@ -39,3 +39,9 @@ def fetch_and_upload_csv():
             SHOPIFY_API_KEY = os.getenv("SHOPIFY_API_KEY")
             SHOPIFY_PASSWORD = os.getenv("SHOPIFY_PASSWORD")
             SHOPIFY_STORE_URL = os.getenv("SHOPIFY_STORE_URL")
+                   # Upload the CSV file to Shopify (you need to implement this part)
+            shopify = Shopify(SHOPIFY_API_KEY, SHOPIFY_PASSWORD, SHOPIFY_STORE_URL)
+            response = shopify.upload_csv("downloaded_file.csv")
+
+            # Print the response
+            print(response)
