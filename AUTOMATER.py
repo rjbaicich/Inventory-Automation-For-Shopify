@@ -20,3 +20,9 @@ def convert_to_shopify_format(input_file, output_file="Inventory_update.csv"):
     # Save the formatted DataFrame as a CSV file
     df.to_csv(output_file, index=False)
     print(f"Converted Shopify inventory saved as {output_file}")
+if __name__ == "__main__":
+    # Specify the path to your input CSV file
+    input_csv_path = "path/to/your/input_file.csv"
+
+    # Convert and save to Shopify format
+    convert_to_shopify_format(input_csv_path)
