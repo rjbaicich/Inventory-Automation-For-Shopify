@@ -12,34 +12,3 @@ However, my vision extends beyond Shopify. While currently tailored for this pla
 ## Overview
 
 This Python script converts a CSV file containing product information into Shopify's required CSV format for product imports. It uses the pandas library to read and manipulate the data.
-
-## Usage
-
-1. Ensure you have Python installed.
-2. Install the required libraries:
-
-    ```bash
-    pip install pandas
-    ```
-
-3. Modify the input CSV file path and column mappings in the script.
-4. Run the script:
-
-    ```bash
-    python shopify_converter.py
-    ```
-
-5. The converted CSV file, `output_shopify.csv`, will be generated.
-
-## Requirements
-
-- Python 3.x
-- pandas library
-"""
-import pandas as pd
-
-def convert_to_shopify_format(input_csv, output_csv):
-    # Your existing code...
-
-if __name__ == "__main__":
-    convert_to_shopify_format('input.csv', 'output_shopify.csv')
