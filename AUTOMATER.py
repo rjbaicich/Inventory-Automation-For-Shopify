@@ -5,11 +5,49 @@ def convert_to_shopify_format(input_file, output_file="Inventory_update.csv"):
     df = pd.read_csv(input_file)
 
     # Customize this section based on your specific mapping requirements
-    # Map your columns to Shopify columns
+  # Map your columns to Shopify columns
     mapping = {
-        'Product Title': 'Title',
-        'Product Description': 'Body (HTML)',
+        'Handle': 'Product Title',
+        'Title': 'Product Title',
+        'Body (HTML)': 'Product Description',
         'Vendor': 'Vendor',
+        'Product Category': 'Category',  # Replace 'Category' with the actual column name in your input file
+        'Type': 'Type',
+        'Tags': 'Tags',
+        'Published': 'Published',
+        'Option1 Name': 'Option1 Name',
+        'Option1 Value': 'Option1 Value',
+        'Option2 Name': 'Option2 Name',
+        'Option2 Value': 'Option2 Value',
+        'Option3 Name': 'Option3 Name',
+        'Option3 Value': 'Option3 Value',
+        'Variant SKU': 'Variant SKU',
+        'Variant Grams': 'Variant Grams',
+        'Variant Inventory Tracker': 'Variant Inventory Tracker',
+        'Variant Inventory Qty': 'Variant Inventory Qty',
+        'Variant Inventory Policy': 'Variant Inventory Policy',
+        'Variant Fulfillment Service': 'Variant Fulfillment Service',
+        'Variant Price': 'Variant Price',
+        'Variant Compare At Price': 'Variant Compare At Price',
+        'Variant Requires Shipping': 'Variant Requires Shipping',
+        'Variant Taxable': 'Variant Taxable',
+        'Variant Barcode': 'Variant Barcode',
+        'Image Src': 'Image Src',
+        'Image Position': 'Image Position',
+        'Image Alt Text': 'Image Alt Text',
+        'Gift Card': 'Gift Card',
+        'SEO Title': 'SEO Title',
+        'SEO Description': 'SEO Description',
+        'Google Shopping / Google Product Category': 'Google Shopping / Google Product Category',
+        'Variant Image': 'Variant Image',
+        'Variant Weight Unit': 'Variant Weight Unit',
+        'Variant Tax Code': 'Variant Tax Code',
+        'Cost per item': 'Cost per item',
+        'Included / [Primary]': 'Included / [Primary]',
+        'Included / International': 'Included / International',
+        'Price / International': 'Price / International',
+        'Compare At Price / International': 'Compare At Price / International',
+        'Status': 'Status',
         # Add more mappings as needed
     }
       # Apply the mapping to the DataFrame
