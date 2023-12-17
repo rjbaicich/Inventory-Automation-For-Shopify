@@ -1,11 +1,13 @@
 import pandas as pd
 
 def convert_to_shopify_format(input_file, output_file="Inventory_update.csv"):
+    
     # Read the input CSV file
     df = pd.read_csv(input_file)
 
     # Customize this section based on your specific mapping requirements
   # Map your columns to Shopify columns
+
     mapping = {
         'Handle': 'Product Title',
         'Title': 'Product Title',
@@ -48,19 +50,27 @@ def convert_to_shopify_format(input_file, output_file="Inventory_update.csv"):
         'Price / International': 'Price / International',
         'Compare At Price / International': 'Compare At Price / International',
         'Status': 'Status',
+
         # Add more mappings as needed
+        
     }
+
       # Apply the mapping to the DataFrame
+
     df = df.rename(columns=mapping)
 
     # Additional formatting or data manipulation if needed
 
     # Save the formatted DataFrame as a CSV file
+
     df.to_csv(output_file, index=False)
     print(f"Converted Shopify inventory saved as {output_file}")
 if __name__ == "__main__":
+    
     # Specify the path to your input CSV file
+
     input_csv_path = "path/to/your/input_file.csv"
 
     # Convert and save to Shopify format
+
     convert_to_shopify_format(input_csv_path)
