@@ -2,16 +2,11 @@
 
 ## Overview
 
-Welcome to the Shopify CSV Converter! This Python script streamlines the process of converting your product information from a CSV file into Shopify's required CSV format for seamless product imports. By harnessing the power of Python and leveraging the pandas library, this tool provides an efficient and user-friendly solution for Shopify store owners.
+Welcome to the Shopify CSV Converter! This Python script is designed to simplify and automate inventory management for Shopify store owners. By converting a CSV file containing product information into Shopify's required CSV format for product imports, the script streamlines the process of updating and managing your product inventory on the Shopify platform.
 
 ## Features
 
-- **Flexibility**: Easily customize column mappings to match your specific product information in the input CSV file.
-- **Modular Architecture**: Designed with a modular architecture to allow for future integration with various e-commerce platforms beyond Shopify.
-- **Efficient Data Processing**: Utilizes the pandas library to efficiently read, manipulate, and format the data.
-
-Specify Input CSV File:
-Replace "path/to/your/input_file.csv" in the script with the path to your actual input CSV file.
-
-Execute the Script:
-Run the script, and the converted Shopify-compatible CSV will be saved as "Inventory_update.csv".
+- **Effortless Integration:** Seamlessly integrates with Shopify's platform, allowing for easy product data import.
+- **Customizable Mapping:** Customize column mappings to match your specific input CSV file structure.
+- **Flexible Architecture:** Designed with a modular and flexible architecture for future integration with other e-commerce platforms.
+- **User-Friendly:** Aims to provide a user-friendly interface for efficient inventory tracking and order fulfillment processes.
