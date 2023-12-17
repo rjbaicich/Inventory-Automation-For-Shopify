@@ -39,3 +39,15 @@ mapping = {
     'Title': 'Product Title',
     # ... (add more mappings as needed)
 }
+
+Output
+The script generates a new CSV file named Inventory_update.csv with the Shopify-formatted product information. This file can be directly uploaded to Shopify.
+
+Roadmap
+This project is a work in progress. Future enhancements may include:
+
+Support for multiple e-commerce platforms.
+Improved error handling and logging.
+Interactive command-line interface.
+Contributing
+Contributions are welcome! If you have ideas for improvements or encounter issues, feel free to open an issue or submit a pull request.
