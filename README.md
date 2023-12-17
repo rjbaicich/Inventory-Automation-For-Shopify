@@ -27,3 +27,15 @@ input_csv_path = "path/to/your/input_file.csv"
 
 # Convert and save to Shopify format
 convert_to_shopify_format(input_csv_path)
+
+Customization:
+Customize the column mappings in the mapping dictionary to match your input CSV file columns.
+
+CSV Mapping
+In the mapping dictionary, map your CSV columns to their corresponding Shopify columns. This step ensures that the script correctly interprets and formats your data.
+
+mapping = {
+    'Handle': 'Product Title',
+    'Title': 'Product Title',
+    # ... (add more mappings as needed)
+}
