@@ -6,10 +6,10 @@ Welcome to the Shopify CSV Converter! This Python script is designed to simplify
 
 ## Features
 
-- **Effortless Integration:** Seamlessly integrates with Shopify's platform, allowing for easy product data import.
-- **Customizable Mapping:** Customize column mappings to match your specific input CSV file structure.
-- **Flexible Architecture:** Designed with a modular and flexible architecture for future integration with other e-commerce platforms.
-- **User-Friendly:** Aims to provide a user-friendly interface for efficient inventory tracking and order fulfillment processes.
+Seamless Integration: Effortlessly integrates into the Shopify platform, simplifying the process of importing product data.
+Tailored Mapping Options: Customize column mappings to align with the specific structure of your input CSV file, offering a personalized and adaptable solution.
+Modular and Adaptable Design: Built with a modular and flexible architecture, facilitating future integration with other e-commerce platforms for enhanced versatility.
+Intuitive User Interface: Strives to deliver a user-friendly interface, streamlining inventory tracking and order fulfillment processes for an efficient user experience.
 
 ## Getting Started
 
