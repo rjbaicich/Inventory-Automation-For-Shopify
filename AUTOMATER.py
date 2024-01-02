@@ -77,6 +77,10 @@ df['Variant Price'] = pd.to_numeric(df['Variant Price'], errors='coerce')
 # Inside convert_to_shopify_format function
 df['Variant Inventory Tracker'].fillna('default_tracker', inplace=True)
 
+# Inside convert_to_shopify_format function
+df['Profit Margin'] = (df['Variant Price'] - df['Cost per item']) / df['Variant Price'] * 100
+
+
 if __name__ == "__main__":
     
     # Specify the path to your input CSV file
