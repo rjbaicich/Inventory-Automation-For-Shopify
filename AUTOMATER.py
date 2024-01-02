@@ -55,6 +55,12 @@ def convert_to_shopify_format(input_file, output_file="Inventory_update.csv"):
         
     }
 
+# Inside convert_to_shopify_format function
+unmapped_columns = set(df.columns) - set(mapping.keys())
+if unmapped_columns:
+    print(f"Warning: Some columns do not have mappings: {', '.join(unmapped_columns)}")
+
+
       # Apply the mapping to the DataFrame
 
     df = df.rename(columns=mapping)
