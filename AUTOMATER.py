@@ -60,6 +60,8 @@ unmapped_columns = set(df.columns) - set(mapping.keys())
 if unmapped_columns:
     print(f"Warning: Some columns do not have mappings: {', '.join(unmapped_columns)}")
 
+# Inside convert_to_shopify_format function
+df['Variant Price'] = pd.to_numeric(df['Variant Price'], errors='coerce')
 
       # Apply the mapping to the DataFrame
 
