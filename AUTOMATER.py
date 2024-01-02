@@ -73,6 +73,10 @@ df['Variant Price'] = pd.to_numeric(df['Variant Price'], errors='coerce')
 
     df.to_csv(output_file, index=False)
     print(f"Converted Shopify inventory saved as {output_file}")
+
+# Inside convert_to_shopify_format function
+df['Variant Inventory Tracker'].fillna('default_tracker', inplace=True)
+
 if __name__ == "__main__":
     
     # Specify the path to your input CSV file
