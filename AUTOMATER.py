@@ -80,6 +80,11 @@ df['Variant Inventory Tracker'].fillna('default_tracker', inplace=True)
 # Inside convert_to_shopify_format function
 df['Profit Margin'] = (df['Variant Price'] - df['Cost per item']) / df['Variant Price'] * 100
 
+# Inside convert_to_shopify_format function
+summary_stats = df.describe(include='all')
+print("Summary Statistics:")
+print(summary_stats)
+
 
 if __name__ == "__main__":
     
