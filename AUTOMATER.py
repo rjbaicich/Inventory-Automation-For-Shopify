@@ -90,6 +90,16 @@ subset_columns = ['Product Title', 'Variant SKU', 'Variant Price']
 df.drop_duplicates(subset=subset_columns, keep='first', inplace=True)
 
 
+# Inside convert_to_shopify_format function
+def custom_data_transformation(row):
+    # Implement your custom transformation logic here
+    # Example: Concatenate Product Title and Variant SKU
+    return f"{row['Product Title']} - {row['Variant SKU']}"
+
+# Apply the custom transformation to a new column
+df['Custom Column'] = df.apply(custom_data_transformation, axis=1)
+
+
 if __name__ == "__main__":
     
     # Specify the path to your input CSV file
