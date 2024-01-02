@@ -85,6 +85,10 @@ summary_stats = df.describe(include='all')
 print("Summary Statistics:")
 print(summary_stats)
 
+# Inside convert_to_shopify_format function
+subset_columns = ['Product Title', 'Variant SKU', 'Variant Price']
+df.drop_duplicates(subset=subset_columns, keep='first', inplace=True)
+
 
 if __name__ == "__main__":
     
