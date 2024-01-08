@@ -42,3 +42,13 @@ def convert_to_shopify_format(input_file, output_file="Inventory_update.csv"):
     # Remove duplicates based on specified columns
     subset_columns = ['Product Title', 'Variant SKU', 'Variant Price']
     df.drop_duplicates(subset=subset_columns, keep='first', inplace=True)
+
+
+    # Custom data transformation function
+    def custom_data_transformation(row):
+        # Implement your custom transformation logic here
+        # Example: Concatenate Product Title and Variant SKU
+        return f"{row['Product Title']} - {row['Variant SKU']}"
+
+    # Apply the custom transformation to a new column
+    df['Custom Column'] = df.apply(custom_data_transformation, axis=1)
