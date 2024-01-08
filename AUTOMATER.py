@@ -62,3 +62,8 @@ if __name__ == "__main__":
 
     # Convert and save to Shopify format
     convert_to_shopify_format(input_csv_path)
+
+# Inside convert_to_shopify_format function
+df['Total Revenue'] = df['Variant Price'] * df['Variant Inventory Qty']
+total_revenue = df['Total Revenue'].sum()
+print(f"Total Revenue: ${total_revenue:.2f}")
