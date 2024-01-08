@@ -79,3 +79,9 @@ def filter_by_status(df, status):
 published_products = filter_by_status(converted_df, 'Published')
 print("\nPublished Products:")
 print(published_products)
+
+
+
+**** additional features?****
+
+Can order processing be incorporated?
