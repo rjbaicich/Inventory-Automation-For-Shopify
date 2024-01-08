@@ -67,3 +67,15 @@ if __name__ == "__main__":
 df['Total Revenue'] = df['Variant Price'] * df['Variant Inventory Qty']
 total_revenue = df['Total Revenue'].sum()
 print(f"Total Revenue: ${total_revenue:.2f}")
+
+# Outside the convert_to_shopify_format function
+def filter_by_status(df, status):
+    # Filter DataFrame by 'Status'
+    filtered_df = df[df['Status'] == status]
+    return filtered_df
+
+# Inside __main__ block
+# Example: Filter by 'Published' status
+published_products = filter_by_status(converted_df, 'Published')
+print("\nPublished Products:")
+print(published_products)
