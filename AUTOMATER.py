@@ -24,3 +24,21 @@ def convert_to_shopify_format(input_file, output_file="Inventory_update.csv"):
 
     # Apply the mapping to the DataFrame
     df = df.rename(columns=mapping)
+
+
+    # Additional formatting or data manipulation if needed
+
+    # Fill NaN values in 'Variant Inventory Tracker'
+    df['Variant Inventory Tracker'].fillna('default_tracker', inplace=True)
+
+    # Calculate 'Profit Margin'
+    df['Profit Margin'] = (df['Variant Price'] - df['Cost per item']) / df['Variant Price'] * 100
+
+    # Summary statistics
+    summary_stats = df.describe(include='all')
+    print("Summary Statistics:")
+    print(summary_stats)
+
+    # Remove duplicates based on specified columns
+    subset_columns = ['Product Title', 'Variant SKU', 'Variant Price']
+    df.drop_duplicates(subset=subset_columns, keep='first', inplace=True)
